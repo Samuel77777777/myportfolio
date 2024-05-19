@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
+import Button from "./Button";
+import { motion } from "framer-motion";
 // import { useEffect, useRef } from "react";
 // import { Typed } from "react-typed";
 
@@ -32,7 +34,25 @@ const Hero = () => {
 
   return (
     <Div>
-      <div className="hero-text">
+      <motion.div
+        className="hero-text"
+        initial={{
+          scale: 0,
+          opacity: 0,
+          x: -500,
+        }}
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        viewport={{
+          once: true,
+        }}
+      >
         <h2 className="hi">Hi, there!</h2>
         <h2 className="name">
           I'M <span className="name power">Samuel B Koroma</span>{" "}
@@ -42,12 +62,30 @@ const Hero = () => {
           integrates front-end and back-end technologies to create fully
           functional web and mobile applications or software solutions.
         </p>
-        <button className="about-me">About Me</button>
+        <Button buttonText="About Me" />
         {/* <span id="typed"></span> */}
-      </div>
-      <div className="main-pic-div">
+      </motion.div>
+      <motion.div
+        className="main-pic-div"
+        initial={{
+          scale: 0,
+          opacity: 0,
+          x: 500,
+        }}
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        viewport={{
+          once: true,
+        }}
+      >
         <img src="assets/mainpic.png" alt="" />
-      </div>
+      </motion.div>
     </Div>
   );
 };
@@ -121,25 +159,55 @@ const Div = styled.div`
     color: #2f27ce;
   }
 
-  .about-me {
-    margin-top: 5px;
-    width: 200px;
-    display: inline-block;
-    border-radius: 5rem;
-    background: #444;
-    color: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.3s ease-in;
-  }
-  .about-me:hover {
-    background-color: #2f27ce;
-  }
+  // .about-me {
+  //   margin-top: 5px;
+  //   width: 200px;
+  //   display: inline-block;
+  //   border-radius: 5rem;
+  //   background: #444;
+  //   color: #fff;
+  //   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  //   padding: 10px 10px;
+  //   position: relative;
+  //   z-index: 0;
+  //   overflow: hidden;
+  //   font-size: 17px;
+  //   cursor: pointer;
+  //   transition: 0.3s ease-in;
+  // }
+  // .about-me:hover {
+  //   background-color: #2f27ce;
+  // }
+
+  // .about-me {
+  //   margin-top: 5px;
+  //   width: 200px;
+  //   display: inline-block;
+  //   border-radius: 5rem;
+  //   padding: 10px 10px;
+  //   position: relative;
+  //   z-index: 0;
+  //   overflow: hidden;
+  //   font-size: 17px;
+  //   cursor: pointer;
+  //   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  //   transition: all 0.3s ease 0s;
+  //   cursor: pointer;
+  //   outline: none;
+  //   background: #444;
+  //   color: #fff;
+  // }
+
+  // .about-me:hover {
+  //   background-color: #2f27ce;
+  //   box-shadow: 0px 15px 20px #2f27ce;
+  //   color: #fff;
+  //   transform: translateY(-7px);
+  // }
+
+  // .about-me:active {
+  //   transform: translateY(-1px);
+  // }
 `;
 
 /*   

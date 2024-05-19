@@ -1,6 +1,18 @@
 import styled from "styled-components";
+import Button from "./Button";
 
 const Navbar = () => {
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement("a");
+    // Set the href attribute to the URL of the file you want to download
+    link.href = "/assets/samuelbkoroma.pdf";
+    // Set the download attribute to specify the file name
+    link.download = "samuelbkoroma.pdf";
+    // Programmatically trigger the click event to start the download
+    link.click();
+  };
+
   return (
     <Div>
       <ul>
@@ -11,7 +23,7 @@ const Navbar = () => {
         <li>Blog</li>
       </ul>
 
-      <button className="cv-btn">download cv</button>
+      <Button buttonText="Download Cv" onClick={handleDownload} />
     </Div>
   );
 };
@@ -53,24 +65,6 @@ const Div = styled.div`
   li:hover {
     cursor: pointer;
     color: #2f27ce;
-  }
-
-  .cv-btn {
-    display: inline-block;
-    border-radius: 5rem;
-    background: #444;
-    color: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    padding: 10px 30px;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.3s ease-in;
-  }
-  .cv-btn:hover {
-    background-color: #2f27ce;
   }
 `;
 

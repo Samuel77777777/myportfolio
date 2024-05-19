@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Button from "./Button";
+import { motion } from "framer-motion";
 
 const Service = () => {
   return (
@@ -6,7 +8,21 @@ const Service = () => {
       <h1 className="heading">My Services</h1>
 
       <div className="service">
-        <div className="services">
+        <motion.div
+          className="services"
+          initial={{
+            opacity: 0,
+            scale: 0,
+            x: -300,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+          }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <span className="number">01</span>
           <h3>web development</h3>
           <p>
@@ -16,10 +32,8 @@ const Service = () => {
             user-friendly, and scalable web solutions that meet your specific
             needs.
           </p>
-          <a href="#" className="btn">
-            read more
-          </a>
-        </div>
+          <Button buttonText="Read More" />
+        </motion.div>
         <div className="services">
           <span className="number">02</span>
           <h3>Mobile development</h3>
@@ -30,11 +44,23 @@ const Service = () => {
             user-friendly, and scalable web solutions that meet your specific
             needs.
           </p>
-          <a href="#" className="btn">
-            read more
-          </a>
+          <Button buttonText="Read More" />
         </div>
-        <div className="services">
+        <motion.div
+          className="services"
+          initial={{
+            opacity: 0,
+            scale: 0,
+            x: 300,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+          }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <span className="number">03</span>
           <h3>Databse development</h3>
           <p>
@@ -44,11 +70,23 @@ const Service = () => {
             user-friendly, and scalable web solutions that meet your specific
             needs.
           </p>
-          <a href="#" className="btn">
-            read more
-          </a>
-        </div>
-        <div className="services">
+          <Button buttonText="Read More" />
+        </motion.div>
+        <motion.div
+          className="services"
+          initial={{
+            opacity: 0,
+            scale: 0,
+            x: -300,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+          }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <span className="number">04</span>
           <h3>Microsoft Package</h3>
           <p>
@@ -58,12 +96,24 @@ const Service = () => {
             user-friendly, and scalable web solutions that meet your specific
             needs.
           </p>
-          <a href="#" className="btn">
-            read more
-          </a>
-        </div>
+          <Button buttonText="Read More" />
+        </motion.div>
 
-        <div className="services">
+        <motion.div
+          className="services"
+          initial={{
+            opacity: 0,
+            scale: 0,
+            x: 300,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            x: 0,
+          }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <span className="number">05</span>s<h3>Saas</h3>
           <p>
             My web development services are tailored to bring your digital
@@ -72,10 +122,8 @@ const Service = () => {
             user-friendly, and scalable web solutions that meet your specific
             needs.
           </p>
-          <a href="#" className="btn">
-            read more
-          </a>
-        </div>
+          <Button buttonText="Read More" />
+        </motion.div>
       </div>
     </Div>
   );

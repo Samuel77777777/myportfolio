@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./Button";
 
 const Contact = () => {
   return (
@@ -34,6 +35,7 @@ const Contact = () => {
                 <label>message</label>
               </div>
 
+              <Button buttonText="Send Message" value="send" type="submit" />
               <input type="submit" value="send message" className="btn" />
             </form>
 

@@ -1,4 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
+import Button from "./Button";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -6,98 +10,304 @@ const Projects = () => {
       <h1 className="heading">Projects</h1>
       <div className="projects">
         <div className="project">
-          <img src="assets/lan4vote.png" alt="" />
-          <div className="text">
+          <motion.div
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: -400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.5 }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <img src="assets/lan4vote.png" alt="" />
+          </motion.div>
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: 400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.5 }}
+            viewport={{
+              once: true,
+            }}
+          >
             <h2>Lan 4 Vote</h2>
 
             <p>
-              Dopefolio is a successful Open-Source project that I created which
-              have been featured on some of the biggest tech sites like
-              CSS-Tricks, Hostinger, etc & used by thousands of developers
-              globally
+              I design the frontend of an app designed to educate citizens in
+              Sierra Leone on proper voting procedures.
             </p>
-            <button className="cv-btn">Case Study</button>
-          </div>
+            <Button buttonText="Case Study" />
+          </motion.div>
         </div>
 
         <div className="project">
-          <img src="assets/tecbiz.png" alt="" />
-          <div className="text">
+          <motion.div
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: -400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <img src="assets/tecbiz.png" alt="" />
+          </motion.div>
+
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: 400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
             <h2>Techbiz</h2>
 
             <p>
-              Dopefolio is a successful Open-Source project that I created which
-              have been featured on some of the biggest tech sites like
-              CSS-Tricks, Hostinger, etc & used by thousands of developers
-              globally
+              I was part of a team that developed an app aimed at helping users
+              locate restaurants and hotels in Sierra Leone, providing detailed
+              information about each establishment
             </p>
-            <button className="cv-btn">Case Study</button>
-          </div>
+            <Button buttonText="Case Study" />
+          </motion.div>
         </div>
 
         <div className="project">
-          <img src="assets/splash.png" alt="" />
-          <div className="text">
+          <motion.div
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: -400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <img src="assets/splash.png" alt="" />
+          </motion.div>
+
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: 400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
             <h2>Cash Box</h2>
 
             <p>
-              Dopefolio is a successful Open-Source project that I created which
-              have been featured on some of the biggest tech sites like
-              CSS-Tricks, Hostinger, etc & used by thousands of developers
-              globally
+              I was part of a team that developed a mobile app allowing users to
+              set savings goals and deposit money for a predetermined duration.
+              Once the set time period is complete, users can withdraw their
+              savings as required.
             </p>
-            <button className="cv-btn">Case Study</button>
-          </div>
+            <Button buttonText="Case Study" />
+          </motion.div>
         </div>
 
         <div className="project">
-          <img src="assets/neuenergy.png" alt="" />
-          <div className="text">
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: -400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <img src="assets/neuenergy.png" alt="" />
+          </motion.div>
+
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: 400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
             <h2>Neuenergy</h2>
 
             <p>
-              Dopefolio is a successful Open-Source project that I created which
-              have been featured on some of the biggest tech sites like
-              CSS-Tricks, Hostinger, etc & used by thousands of developers
-              globally
+              I developed an app showcasing comprehensive information about a
+              Sierra Leonean company specializing in electric vehicles,
+              providing users with all they need to know about the company's
+              offerings.
             </p>
-            <button className="cv-btn">Case Study</button>
-          </div>
+            <Button buttonText="Case Study" />
+          </motion.div>
         </div>
 
         <div className="project">
-          <img src="assets/berakah.png" alt="" />
-          <div className="text">
+          <motion.div
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: -400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <img src="assets/berakah.png" alt="" />
+          </motion.div>
+
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: 400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
             <h2>Berahkah</h2>
 
             <p>
-              Dopefolio is a successful Open-Source project that I created which
-              have been featured on some of the biggest tech sites like
-              CSS-Tricks, Hostinger, etc & used by thousands of developers
-              globally
+              I developed a booking system app tailored for hotels, simplifying
+              the process of collecting and managing all their data efficiently.
             </p>
-            <button className="cv-btn">Case Study</button>
-          </div>
+            <Button buttonText="Case Study" />
+          </motion.div>
         </div>
 
         <div className="project">
-          <img src="assets/dele.png" alt="" />
-          <div className="text">
+          <motion.div
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: -400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <img src="assets/dele.png" alt="" />
+          </motion.div>
+
+          <motion.div
+            className="text"
+            initial={{
+              scale: 0,
+              opacity: 0,
+              x: 400,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{ duration: 0.7 }}
+            viewport={{
+              once: true,
+            }}
+          >
             <h2>Taramax</h2>
 
             <p>
-              Dopefolio is a successful Open-Source project that I created which
-              have been featured on some of the biggest tech sites like
-              CSS-Tricks, Hostinger, etc & used by thousands of developers
-              globally
+              Introducing TaramaX, the comprehensive loan system app designed
+              specifically for TaramaxSl. Simplify loan applications, approvals,
+              and management with our secure, user-friendly platform. Optimize
+              your loan business with TaramaX.
             </p>
-            <button className="cv-btn">Case Study</button>
-          </div>
+            <Button buttonText="Case Study" />
+          </motion.div>
         </div>
       </div>
 
       <div className="git-link">
-        <button className="btt">Checkout the all my projects in Github </button>
+        <Link
+          className="btt"
+          to="https://github.com/Samuel77777777?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Checkout the all my projects in Github
+        </Link>
       </div>
     </Div>
   );
@@ -107,6 +317,7 @@ export default Projects;
 
 const Div = styled.div`
   margin-top: 200px;
+  margin-bottom: 200px;
   .heading {
     text-align: center;
     padding: 1rem;

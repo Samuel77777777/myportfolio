@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
+import Button from "./Button";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
@@ -7,7 +9,25 @@ const AboutMe = () => {
       <h1 className="heading">About Me</h1>
 
       <div className="about-me-container">
-        <div className="container-1">
+        <motion.div
+          className="container-1"
+          initial={{
+            scale: 0,
+            opacity: 0,
+            x: -400,
+          }}
+          whileInView={{
+            scale: 1,
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
           <h1 className="heads">Get to Know Me!</h1>
 
           <p>
@@ -21,10 +41,28 @@ const AboutMe = () => {
             to me right here!
           </p>
 
-          <button className="contact">Contact</button>
-        </div>
+          <Button buttonText="Contact Me" />
+        </motion.div>
 
-        <div className="container-2">
+        <motion.div
+          className="container-2"
+          initial={{
+            scale: 0,
+            opacity: 0,
+            x: 400,
+          }}
+          whileInView={{
+            scale: 1,
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
           <h1 className="heads">My Skills</h1>
 
           <div className="skills">
@@ -32,7 +70,7 @@ const AboutMe = () => {
             <div className="skill">React</div>
             <div className="skill">MySql</div>
             <div className="skill">HTML</div>
-            <div className="skill">Css</div>
+            <div className="skill">CSS</div>
             <div className="skill">Javascript</div>
             <div className="skill">GitHub</div>
             <div className="skill">Firebase</div>
@@ -40,7 +78,7 @@ const AboutMe = () => {
             <div className="skill">3D Printing</div>
             <div className="skill">Laser Cutting</div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Div>
   );
@@ -119,6 +157,14 @@ const Div = styled.div`
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: #777;
+    cursor: pointer;
+  }
+  .skill:hover {
+    background: #2f27ce;
+    color: white;
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
   }
 
   .contact {
